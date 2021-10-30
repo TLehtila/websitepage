@@ -1,0 +1,51 @@
+﻿<div id="modalText" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="navbar-nav flex-row justify-content-center">
+            <li class="nav-item"><a class="nav-link col navbtn btn-primary" href="#" id="code">Code</a></li>
+            <li class="nav-item"><a class="nav-link col navbtn btn-primary" href="#" id="threed">3D</a></li>
+            <li class="nav-item"><a class="nav-link col navbtn btn-primary" href="#" id="photo">Photos</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-lg col-md-4">
+            <div class="row">
+                <div class="btn btn-grid" id="grid-1" data-bs-toggle="modal" data-bs-target="#modalText" data-location="threed.html">
+                    THREED THREED THREED
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#modalText').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var textLocation = button.data("location");
+        $('.modal-body').load(textLocation, function () { });
+    });
+    $(document).ready(function () {
+        $('#code').click(function () {
+            $('#page-content-wrapper').load('code.html');
+        })
+        $('#threed').click(function () {
+            $('#page-content-wrapper').load('threed.html');
+        })
+        $('#photo').click(function () {
+            $('#page-content-wrapper').load('photo.html');
+        })
+    })
+</script>

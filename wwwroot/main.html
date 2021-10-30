@@ -1,0 +1,45 @@
+﻿    <!-- Navigation -->
+<nav class="navbar">
+    <ul class="navbar-nav flex-row justify-content-center">
+        <li class="nav-item"><a class="nav-link col navbtn btn-primary" href="#" id="code">Code</a></li>
+        <li class="nav-item"><a class="nav-link col navbtn btn-primary" href="#" id="threed">3D</a></li>
+        <li class="nav-item"><a class="nav-link col navbtn btn-primary" href="#" id="photo">Photos</a></li>
+    </ul>
+</nav>
+<div class="container container-main">
+    <div class="flex-row">
+        <a class="col-xs-4 main-page main-page-1" href="#" id="code">
+            <div class="row main-text-1 main-text text-xs-center">
+                <div class="col col-small align-items-center vertical-center">I code.</div>
+            </div>
+            <div class="row"><img src="img/codepicture.jpg" class="img-cropped-1 img-cropped" alt="Picture of code."></div>
+        </a>
+        <a class="col-xs-4 main-page main-page-2" href="#" id="threed">
+            <div class="row main-text-2 main-text text-xs-center">
+                <div class="col col-small align-items-center vertical-center">I 3D model.</div>
+            </div>
+            <div class="row"><img src="img/leaning.jpg" class="img-cropped-2 img-cropped" alt="3D-rendered image of a woman leaning against wall in fog."></div>
+        </a>
+        <a class="col-xs-4 main-page main-page-3" href="#" id="photo">
+            <div class="row main-text-3 main-text">
+                <div class="col col-small align-items-center vertical-center">I take pictures.</div>
+            </div>
+            <div class="row"><img src="img/photohouse.jpg" class="img-cropped-3 img-cropped" alt="Photo of a red house by sea."></div>
+        </a>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('#code').click(function () {
+            $('#page-content-wrapper').load('code.html');
+        })
+        $('#threed').click(function () {
+            $('#page-content-wrapper').load('threed.html');
+        })
+        $('#photo').click(function () {
+            $('#page-content-wrapper').load('photo.html');
+        })
+    })
+</script>

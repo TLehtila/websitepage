@@ -1,0 +1,29 @@
+﻿<div class="container-fluid">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="navbar-nav flex-row justify-content-center">
+            <li class="nav-item"><a class="nav-link col navbtn btn-primary" href="#" id="code">Code</a></li>
+            <li class="nav-item"><a class="nav-link col navbtn btn-primary" href="#" id="threed">3D</a></li>
+            <li class="nav-item"><a class="nav-link col navbtn btn-primary" href="#" id="photo">Photos</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="testtext">
+    PHOTO PAGEPHOTO PAGEPHOTO PAGEPHOTO PAGEPHOTO PAGEPHOTO PAGEPHOTO PAGEPHOTO PAGEPHOTO PAGEPHOTO PAGEPHOTO PAGEPHOTO PAGEPHOTO PAGEPHOTO PAGEPHOTO PAGE
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('#code').click(function () {
+            $('#page-content-wrapper').load('code.html');
+        })
+        $('#threed').click(function () {
+            $('#page-content-wrapper').load('threed.html');
+        })
+        $('#photo').click(function () {
+            $('#page-content-wrapper').load('photo.html');
+        })
+    })
+</script>
